@@ -52,7 +52,7 @@ function renderAnswer(ansWord) {
     node.appendChild(nodeAnswerValue); // tao ra the div chua d
     answerElement.appendChild(node); //append nguyen the div vao answer element
     node.setAttribute("id", answerKey);
-    node.style.display="none";
+    node.style.display = "none";
 
     let nodePreanswer = document.createElement("div");
     nodePreanswer.classList.add("preAnswer");
@@ -95,15 +95,15 @@ function handleClickAlphabet(e) {
     console.log(compareData);
     findCharacter.style.display = "block";
     console.log(findCharacter.nextElementSibling);
-    findCharacter.nextElementSibling.style.display="none";
+    findCharacter.nextElementSibling.style.display = "none";
     if (isGameFinished(compareData)) {
       console.log("end");
       clearInterval(interval);
-      let nodeResult = document.createElement("p")
-      nodeResult.setAttribute("id","resultWords");
+      let nodeResult = document.createElement("p");
+      nodeResult.setAttribute("id", "resultWords");
       nodeResult.innerHTML = "You win<br/>" + ansCompare;
       document.getElementById("result").prepend(nodeResult);
-
+      document.getElementById("retry").style.display = "block";
 
       for (let i = 0; i < listAlphebetElement.length; i++) {
         listAlphebetElement[i].removeEventListener(
@@ -111,7 +111,7 @@ function handleClickAlphabet(e) {
           handleClickAlphabet
         );
       }
-    } 
+    }
   } else {
     ruleFail++;
     let x = getImageFailByRule(ruleFail);
@@ -120,8 +120,8 @@ function handleClickAlphabet(e) {
       ruleFail = 0;
       clearTimer();
       document.getElementById("retry").style.display = "block";
-      let nodeResult = document.createElement("p")
-      nodeResult.setAttribute("id","resultWords");
+      let nodeResult = document.createElement("p");
+      nodeResult.setAttribute("id", "resultWords");
       nodeResult.innerHTML = "You lose<br/> The answer is " + ansCompare;
       document.getElementById("result").prepend(nodeResult);
       for (let i = 0; i < listAlphebetElement.length; i++) {
@@ -134,7 +134,6 @@ function handleClickAlphabet(e) {
   }
 }
 
-
 function initGame() {
   let n = Math.floor(Math.random() * dataSet.length);
   let ansWord = dataSet[n];
@@ -145,13 +144,12 @@ function initGame() {
   let imgHangmanDefault = getImageFailByRule(0);
   imgElement.src = imgHangmanDefault;
   ruleFail = 0;
-
 }
 function handleRetry() {
   handleClearData();
   initGame();
   document.getElementById("retry").style.display = "none";
-  document.getElementById("resultWords").remove()
+  document.getElementById("resultWords").remove();
 }
 function handleClearData() {
   answerElement.innerHTML = "";
