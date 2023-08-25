@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <main>
+        <div class="titleAndTopic">
+        <div>The hangman Game</div>
+        <p>Topic: football</p>
+        </div>
+      <div id="buttonAndRule">
+        <div id="levelSelectedButton">
+          <button onclick="onClick(1)" class="levelSelected">Easy</button>
+          <button onclick="onClick(2)" class="levelSelected">Medium</button>
+          <button onclick="onClick(3)" class="levelSelected">Hard</button>
+        </div>
+        <div id="rule">
+          <ol>
+            <li>
+              You will be given a word and you have to guess it by
+              press in the letters displayed
+            </li>
+            <li>If you make a mistake, a hangman will be drawn</li>
+            <li>
+              A timer will be set so that if you didn’t give out any choices in
+              limited time, you will be mark as false and hangman is drawn
+            </li>
+            <li>If the hangman is complete, you will lose the game</li>
+          </ol>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    function onClick(level) {
+      localStorage.setItem("level", level);
+      window.location.href = "play-game.html";
+    }
+  </script>
+</html>

@@ -1,0 +1,92 @@
+main {
+    position: relative;
+height: 100vh;
+
+}
+.imageHangman{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+.imageHangman>img{
+    width: 100%;
+    height: 100%;
+
+}
+#answer {
+    position:absolute;
+    left: 620px;
+    top: 350px;
+    display: flex;
+}
+#tableAlphabet{
+    position: absolute;
+    left: 600px;
+    width: 500px;
+    max-width: 500px ;
+    text-align: center;
+    top: 400px;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #fdca75;
+    padding: 10px 10px 5px 10px;
+    border-radius: 10px;
+}
+.alphabet{
+border: 2px solid #dc7d43;
+margin-left: 10px;
+margin-bottom: 10px;
+width: 40px;
+height: 40px;
+line-height: 40px;
+}
+.alphabet:hover{
+    cursor: pointer;
+    background: red; 
+}
+#answer div{
+    margin-left: 25px;
+    padding: 10px;
+    border-bottom: 5px solid black;
+    
+}
+#countWatch {
+    position: absolute;
+    top: 30px;
+    right: 30px
+    
+}
+#countWatch img{
+    width: 200px;
+    height: 200px;
+}
+#timer {
+    position: absolute;
+    top: 60px;
+    right: 130px;
+    font-size: 36px;
+}  
+#result{
+    position: absolute;
+    width: 100px;
+    top: 30%;
+    right: 50%;
+}
+#retry{
+    display: none;
+    width: 147px;
+    height: 40px;
+    background: #fdca75;
+}
+#retry:hover{
+    cursor: pointer;
+    background-color: red;
+}
+#resultWords{
+    font-size: 20px;
+    font-weight: 700;
+    width: 182px;
+}

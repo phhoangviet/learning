@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/playGame.css">
+  </head>
+
+  <body>
+    <main>
+      <div class="imageHangman">
+        <img id="hangman" src="" />
+      </div>
+      <div id="countWatch">
+        <img src="images/clock.png"></img>
+      </div>
+
+      <div id="answer"></div>
+      <div id="tableAlphabet"></div>
+      <div id="timer"></div>
+      <div id="result">
+        <button onclick="handleRetry()" id="retry">
+        retry
+      </button>
+    </div>
+      
+    </main>
+  </body>
+  <script src="countdown.js"></script>
+  <script src="main.js"></script>
+</html>
